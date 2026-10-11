@@ -12,3 +12,4 @@
 ## Application architecture
 - Keep the barbershop's public presentation on the index route with in-page service and contact sections; all booking actions open WhatsApp rather than claiming an internal booking system.
 - Define visual roles and responsive presentation in the global design system, with reusable Button variants for calls to action, to keep the brand consistent.
+- Keep published service prices in a browser-safe shared data module with concrete source-table tests; preserve ambiguous entries rather than inventing service distinctions.
