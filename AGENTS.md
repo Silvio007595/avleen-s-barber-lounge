@@ -8,3 +8,7 @@
 > Commits you push to the connected branch sync back to Lovable and show up in
 > the editor, so keep the branch in a working state.
 <!-- LOVABLE:END -->
+
+## Application architecture
+- Keep the barbershop's public presentation on the index route with in-page service and contact sections; all booking actions open WhatsApp rather than claiming an internal booking system.
+- Define visual roles and responsive presentation in the global design system, with reusable Button variants for calls to action, to keep the brand consistent.
