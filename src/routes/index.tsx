@@ -8,14 +8,14 @@ import { serviceGroups } from '@/lib/barber-services';
 
 const whatsapp = 'https://wa.me/258848962998?text=' + encodeURIComponent('Olá, Avleen’s Barber! Gostaria de fazer uma marcação.');
 const instagram = 'https://www.instagram.com/avleens_barber/';
-const maps = 'https://www.google.com/maps/search/?api=1&query=' + encodeURIComponent('1 de Maio, paragem padaria, Maputo, Moçambique');
+const maps = 'https://www.google.com/maps/search/?api=1&query=' + encodeURIComponent('1 de Maio, paragem padaria, Khongolote, Maputo, Moçambique');
 
 export const Route = createFileRoute('/')({
  head: () => ({ meta: [
-  { title: 'Avleen’s Barber | Barbearia na Grande Maputo' },
-  { name: 'description', content: 'Barbearia premium na Grande Maputo. Cortes para adultos e crianças, barba, barber terapia, limpeza facial e cuidados masculinos. Consulte serviços e preços em MZN.' },
-  { property: 'og:title', content: 'Avleen’s Barber | Barbearia na Grande Maputo' },
-  { property: 'og:description', content: 'O seu estilo, ao detalhe. Cortes e barba na Grande Maputo. Marque pelo WhatsApp: 84 8962998.' },
+  { title: 'Avleen’s Barber | Barbearia em Khongolote' },
+  { name: 'description', content: 'Barbearia premium em Khongolote. Cortes para adultos e crianças, barba, barber terapia, limpeza facial e cuidados masculinos. Consulte serviços e preços em MZN.' },
+  { property: 'og:title', content: 'Avleen’s Barber | Barbearia em Khongolote' },
+  { property: 'og:description', content: 'O seu estilo, ao detalhe. Cortes e barba em Khongolote. Marque pelo WhatsApp: 84 8962998.' },
   { property: 'og:type', content: 'website' },
   { name: 'twitter:card', content: 'summary_large_image' },
  ] }),
@@ -28,7 +28,7 @@ const services = [
  { number: '03', icon: Sparkles, title: 'Cuidados completos', description: 'Limpeza facial, sobrancelhas, depilação à cera, pedicure e unhas. Porque a diferença está em cada detalhe.' },
 ];
 
-function Brand() { return <div className="brand-lockup"><img src={logo.url} alt="Logótipo oficial da Avleen’s Barber" width={150} height={150} className="brand-logo" /><div className="brand">Avleen’s Barber<span>BARBEARIA · MAPUTO</span></div></div>; }
+function Brand() { return <div className="brand-lockup"><img src={logo.url} alt="Logótipo oficial da Avleen’s Barber" width={150} height={150} className="brand-logo" /><div className="brand">Avleen’s Barber<span>BARBEARIA · KHONGOLOTE</span></div></div>; }
 function Index() {
  const [menuOpen, setMenuOpen] = useState(false);
  return <>
@@ -47,11 +47,11 @@ function Index() {
    <section className="hero" id="inicio">
     <img src={heroImage} alt="Interior ilustrativo de uma barbearia de alto padrão, sem pessoas" className="hero-photo" width={1920} height={1024} fetchPriority="high" />
     <div className="site-width hero-content">
-     <div className="eyebrow">Barbearia premium · Grande Maputo</div>
+     <div className="eyebrow">Barbearia premium · Khongolote</div>
      <h1>Avleen’s<br /><span>Barber.</span></h1>
      <p className="hero-description">Um espaço de excelência. Um estilo à sua altura.<br />Serviços de ponta e cuidado masculino completo, com a atenção que merece.</p>
      <div className="hero-actions"><Button asChild variant="booking" size="hero"><a href={whatsapp} target="_blank" rel="noopener noreferrer"><MessageCircle /> Marcar pelo WhatsApp <ArrowUpRight /></a></Button><Button asChild variant="heroOutline" size="hero"><a href="#servicos">Os nossos serviços <ArrowRight /></a></Button></div>
-     <a className="hero-location" href={maps} target="_blank" rel="noopener noreferrer"><MapPin className="size-3.5" /> 1 de Maio, paragem padaria · Grande Maputo</a>
+     <a className="hero-location" href={maps} target="_blank" rel="noopener noreferrer"><MapPin className="size-3.5" /> 1 de Maio, paragem padaria · Khongolote</a>
     </div>
     <div className="hero-caption">Excelência em cada detalhe</div>
    </section>
@@ -66,7 +66,7 @@ function Index() {
     <p className="price-note">A tabela inclui diferentes valores para barba express (150 e 200 MZN). Confirme a opção pretendida pelo WhatsApp.</p>
    </div></section>
    <section id="visite" className="section visit"><div className="site-width visit-inner">
-    <div><div className="eyebrow">À sua espera, em Maputo</div><h2>O seu próximo corte<br />começa aqui.</h2><a href={maps} target="_blank" rel="noopener noreferrer" className="contact-row"><MapPin /><div><strong>1 de Maio, paragem padaria</strong><span>Grande Maputo · Moçambique</span></div><ArrowUpRight className="ml-auto" /></a><a href="tel:+258848962998" className="contact-row"><Phone /><div><strong>84 896 2998</strong><span>Chamadas e WhatsApp</span></div><ArrowUpRight className="ml-auto" /></a><a href={instagram} target="_blank" rel="noopener noreferrer" className="contact-row"><Instagram /><div><strong>@avleens_barber</strong><span>Acompanhe-nos no Instagram</span></div><ArrowUpRight className="ml-auto" /></a></div>
+    <div><div className="eyebrow">À sua espera, em Khongolote</div><h2>O seu próximo corte<br />começa aqui.</h2><a href={maps} target="_blank" rel="noopener noreferrer" className="contact-row"><MapPin /><div><strong>1 de Maio, paragem padaria</strong><span>Khongolote · Moçambique</span></div><ArrowUpRight className="ml-auto" /></a><a href="tel:+258848962998" className="contact-row"><Phone /><div><strong>84 896 2998</strong><span>Chamadas e WhatsApp</span></div><ArrowUpRight className="ml-auto" /></a><a href={instagram} target="_blank" rel="noopener noreferrer" className="contact-row"><Instagram /><div><strong>@avleens_barber</strong><span>Acompanhe-nos no Instagram</span></div><ArrowUpRight className="ml-auto" /></a></div>
     <div className="appointment"><div className="eyebrow">Reserve o seu momento</div><h2>Pronto para renovar<br />o seu visual?</h2><p>Fale connosco pelo WhatsApp para escolher o seu serviço e combinar o melhor horário para si.</p><Button asChild variant="booking" size="hero"><a href={whatsapp} target="_blank" rel="noopener noreferrer"><MessageCircle /> Fazer uma marcação <ArrowUpRight /></a></Button></div>
    </div></section>
   </main>
