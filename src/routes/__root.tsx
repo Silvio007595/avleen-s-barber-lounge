@@ -8,10 +8,10 @@ import {
   Scripts,
   type ErrorComponentProps,
 } from "@tanstack/react-router";
-import { useEffect, type ReactNode } from "react";
+import { type ReactNode } from "react";
 
 import appCss from "../styles.css?url";
-import { reportLovableError } from "../lib/lovable-error-reporting";
+
 
 function NotFoundComponent() {
   return (
@@ -38,9 +38,7 @@ function NotFoundComponent() {
 function ErrorComponent({ error, reset }: ErrorComponentProps) {
   console.error(error);
   const router = useRouter();
-  useEffect(() => {
-    reportLovableError(error, { boundary: "tanstack_root_error_component" });
-  }, [error]);
+  
 
   return (
     <div className="flex min-h-screen items-center justify-center bg-background px-4">
@@ -83,7 +81,10 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { property: "og:title", content: "Avleen’s Barber" },
       { property: "og:description", content: "Cortes precisos e barba alinhada em Khongolote." },
       { property: "og:type", content: "website" },
+      { property: "og:image", content: "https://SEU-DOMINIO/og.jpg" },
+      { property: "og:url", content: "https://SEU-DOMINIO" },
       { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:image", content: "https://SEU-DOMINIO/og.jpg" },
     ],
     links: [
       { rel: "stylesheet", href: "https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&family=Oswald:wght@400;500;600;700&display=swap" },
